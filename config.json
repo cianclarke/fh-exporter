@@ -8,5 +8,6 @@
     "url" : "http://bar.feedhenry.com",
     "username" : "yourDestinationUsernameHere",
     "password" : "yourDestinationPasswordHere"
-  }
+  },
+  "objects" : ["forms"]
 }

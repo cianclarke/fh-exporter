@@ -1,0 +1,12 @@
+{
+  "from" : {
+    "url" : "http://foo.feedhenry.com",
+    "username" : "yourUsernameHEre",
+    "password" : "yourPasswordHere"
+  },
+  "to" : {
+    "url" : "http://bar.feedhenry.com",
+    "username" : "yourDestinationUsernameHere",
+    "password" : "yourDestinationPasswordHere"
+  }
+}

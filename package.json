@@ -1,0 +1,19 @@
+{
+  "name": "fh-exporter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "exporter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.0",
+    "fh-fhc": "https://github.com/feedhenry/fh-fhc/archive/2.0.4+71.tar.gz",
+    "underscore": "^1.8.3"
+  },
+  "scripts" : {
+    "start" : "node exporter.js"
+  }
+}

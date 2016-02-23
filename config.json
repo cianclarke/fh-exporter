@@ -9,5 +9,10 @@
     "username" : "yourDestinationUsernameHere",
     "password" : "yourDestinationPasswordHere"
   },
-  "objects" : ["forms"]
+  "objects" : ["forms", "themes", "projects"],
+  "environments" : {
+    "source-dev" : "dest-dev",
+    "source-test" : "dest-qa",
+    "source-live" : "dest-prod"
+  }
 }

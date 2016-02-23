@@ -2,6 +2,7 @@ var fhc = require('fh-fhc');
 var async = require('async');
 var _ = require('underscore');
 var fs = require('fs');
+var doLogIn = require('./lib/doLogIn');
 var getFullFormDefinition = function(formId, cb){
   return fhc.appforms.forms.read({ id : formId }, function(err, formResult){
     if (err){
@@ -11,20 +12,7 @@ var getFullFormDefinition = function(formId, cb){
   });
 };
 
-function doLogIn(loginConfig, cb){
-  fhc.target({_ : [loginConfig.url]}, function(err){
-    if (err){
-      return cb(err);
-    }
-    console.log('Successfully targeted from url: ' + loginConfig.url);
-    fhc.login({ _ : [loginConfig.username, loginConfig.password] }, function(err){
-      if (!err){
-        console.log("Logged in as " + loginConfig.username);
-      }
-      return cb(err);
-    });
-  });
-}
+
 
 var getOldForms = function(config, cb){  
   doLogIn(config.from, function(loginErr){
@@ -166,6 +154,7 @@ var getOldThemes = function(config, cb){
     });
   })
 };
+
 var operations = {
   // exports all old forms, imports new ones
   forms : function(config, cb){
@@ -185,7 +174,8 @@ var operations = {
         return importNewThemes(config, oldThemes, waterfallCb);
       }
     ], cb);
-  }  
+  },
+  projects : require('./lib/projects')
 };
 
 

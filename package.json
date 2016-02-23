@@ -4,16 +4,14 @@
   "description": "",
   "main": "exporter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node exporter.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "async": "^1.5.0",
-    "fh-fhc": "https://github.com/feedhenry/fh-fhc/archive/2.0.4+71.tar.gz",
+    "fh-fhc": "git://github.com/cianclarke/fh-fhc.git#dbEnvVarsEmptyRepos",
+    "nodegit": "^0.11.2",
     "underscore": "^1.8.3"
-  },
-  "scripts" : {
-    "start" : "node exporter.js"
   }
 }
